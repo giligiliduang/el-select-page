@@ -1,7 +1,7 @@
-import helloworld from "../../../../packages/HelloWorld/lang/zh-CN";
+import ElSelectPage from "../../../../packages/ElSelectPage/lang/zh-CN";
 
 export default {
   vgc: {
-    helloworld
+    ElSelectPage
   },
 };

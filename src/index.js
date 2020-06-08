@@ -1,8 +1,8 @@
 import locale from './utils/locale';
 
-import HelloWorld from "../packages/HelloWorld/src";
+import ElSelectPage from "../packages/ElSelectPage/src";
 // import { version } from "./package.json";
-const components = [HelloWorld];
+const components = [ElSelectPage];
 const version = "0.0.1";
 
 const install = function(Vue, opts = {}) {
@@ -20,4 +20,4 @@ if (typeof window !== "undefined" && window.Vue) {
   install(window.Vue);
 }
 
-export default { version, install, HelloWorld };
+export default { version, install, ElSelectPage };

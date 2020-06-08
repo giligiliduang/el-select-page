@@ -15,17 +15,100 @@ import "el-select-page/lib/index.css";
 Vue.use(ElSelectPage);
 ```
 
+<script>
+export default {
+  data(){
+    return {
+      pageData:[
+        {
+          value:'1',
+          label:'黑河市'
+        },
+        {
+          value:'2',
+          label:'孝感市'
+        },
+        {
+          value:'3',
+          label:'讷河市'
+        }
+      ]
+    }
+  }
+}
+</script>
+
 ## 代码实例
+::: demo
+<template>
+    <el-select-page
+    @on-page-change="handlePageChange"
+    :data="pageData"
+    :totalItems="7"
+    :pageSize="pageSize"
+    :multiple="true"
+    />
+</template>
 
-<code-box title="标题" description="这是helloworld的demo简单描述支持`简单md格式`">
-  <p>下面是hello world 的 vue 组件</p>
-  <el-select-page message="World"></el-select-page>
-  <p>这是底部说明文字</p>
-</code-box>
+<script>
 
-```vue
-<el-select-page :message="World"></el-select-page>
-```
+const data = [
+        {
+          label:'1',
+          value:1
+        },
+        {
+          label:'2',
+          value:2
+        },
+        {
+          label:'3',
+          value:3
+        },
+        {
+          label:'4',
+          value:4
+        },
+        {
+          label:'5',
+          value:5
+        },
+        {
+          label:'6',
+          value:6
+        },
+        {
+          label:'7',
+          value:7
+        }
+      ]
+export default {
+  data(){
+    return {
+      pageData:[],
+      pageSize:3,
+      page:1
+    }
+  },
+  mounted(){
+    this.pageData = data.slice((this.page-1)*this.pageSize,this.page*this.pageSize)
+  },
+    methods: {
+        handlePageChange(page,size){
+          this.page = page
+          this.pageData = data.slice((page-1)*size,page*size)
+        }
+    },
+}
+</script>
+
+<style>
+button {
+    color: blue;
+}
+</style>
+:::
+
 
 ## 参数
 

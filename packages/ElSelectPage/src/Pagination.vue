@@ -22,16 +22,21 @@ export default {
       totalPage: 0
     };
   },
+  mounted(){
+    console.log('mount')
+  },
   watch: {
     pageSize: {
       immediate: true,
       handler(val) {
+        console.log('pageSizeChange')
         this.totalPage = Math.ceil(this.total / this.pageSize);
       }
     },
     total: {
       immediate: true,
       handler(val) {
+        console.log('totalPageChange')
         this.totalPage = Math.ceil(this.total / this.pageSize);
       }
     },

@@ -8,7 +8,7 @@ module.exports = {
   /**
    * Ref：https://v1.vuepress.vuejs.org/config/#description
    */
-  description: "",
+  description: "一个基于el-select开发的可分页选择器",
 
   /**
    * Extra tags to be injected to the page HTML `<head>`
@@ -16,9 +16,18 @@ module.exports = {
    * ref：https://v1.vuepress.vuejs.org/config/#head
    */
   head: [
-    ['meta', { name: 'theme-color', content: '#3eaf7c' }],
-    ['meta', { name: 'apple-mobile-web-app-capable', content: 'yes' }],
-    ['meta', { name: 'apple-mobile-web-app-status-bar-style', content: 'black' }]
+    ['meta', {
+      name: 'theme-color',
+      content: '#3eaf7c'
+    }],
+    ['meta', {
+      name: 'apple-mobile-web-app-capable',
+      content: 'yes'
+    }],
+    ['meta', {
+      name: 'apple-mobile-web-app-status-bar-style',
+      content: 'black'
+    }]
   ],
 
   /**
@@ -32,8 +41,7 @@ module.exports = {
     docsDir: '',
     editLinkText: '',
     lastUpdated: false,
-    nav: [
-    ],
+    nav: [],
     sidebar: [
       ["/", "介绍"],
       {
@@ -46,7 +54,7 @@ module.exports = {
     ]
   },
 
-  chainWebpack: webpackConfig =>{
+  chainWebpack: webpackConfig => {
     webpackConfig.resolve.alias.set(
       'vgc',
       path.resolve(__dirname, '../../src')
@@ -64,6 +72,6 @@ module.exports = {
   plugins: [
     '@vuepress/plugin-back-to-top',
     '@vuepress/plugin-medium-zoom',
-    "vuepress-plugin-code-box"
+    "demo-code"
   ]
 }

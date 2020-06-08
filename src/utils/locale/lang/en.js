@@ -1,7 +1,7 @@
-import helloworld from "../../../../packages/HelloWorld/lang/en"
+import ElSelectPage from "../../../../packages/ElSelectPage/lang/en"
 
 export default {
   vgc: {
-    helloworld,
+    ElSelectPage,
   },
 };
